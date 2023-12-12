@@ -1,0 +1,11 @@
+.film-card {
+    display: flex;
+    gap: 40px;
+    height: 60vh;
+    padding: 20px 30px;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    backdrop-filter: blur(9.6px);
+    box-shadow: 0 0 100px 13px rgba(255, 255, 255, 0.12);
+}
+

@@ -1,0 +1,12 @@
+.movie-page{
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat;
+
+}
+
+.movie-wrapper{
+    margin: -270px auto 100px;
+}

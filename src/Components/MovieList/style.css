@@ -1,0 +1,17 @@
+.movie-box{
+    cursor:pointer;
+}
+
+.movie-box:hover{
+    transform: scale(1.02);
+    transition: 0.6s;
+}
+
+.movie-box img:hover{
+    transition: 0.6s;
+    box-shadow: 0px 36px 50px -4px rgba(255, 255, 255, 0.2);
+}
+
+.logo-imdb p{
+    padding-left: 10px;
+}
