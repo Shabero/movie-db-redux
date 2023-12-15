@@ -25,7 +25,7 @@ export default function Carousel({movies}) {
                 loop={true}
                 navigation={true}
                 autoplay={{
-                    delay: 4000,
+                    delay: 10000000,
                     disableOnInteraction: false
                 }}
                 modules={[EffectFade, Navigation, Autoplay]}

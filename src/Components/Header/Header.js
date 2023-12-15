@@ -4,6 +4,7 @@ import './style.css'
 import axios from "axios";
 import {API_KEY, BASE_URL} from "../../config/config";
 import Logo from '../../../../mui/src/Components/Assets/logo.png';
+import {AppBar, Box, Container, IconButton, InputBase, Toolbar, Typography} from "@mui/material";
 
 
 
@@ -26,28 +27,61 @@ const Header = () => {
     }, [search]);
 
     return (
-        <header className={"header p-3   fixed-top "}>
-            <nav className="navbar navbar-dark ">
-                <div className="container-fluid justify-content-around">
-                    <div className={'links'}>
-                        <Link className={'logo'}>
-                            <img src={Logo} alt=""/>
-                        </Link>
-                        <Link to={'/'}  className='navbar-brand'>Home</Link>
-                        <Link to={'/movie'} className='navbar-brand'>Movies</Link>
-                    </div>
-                    <div className={'search-link  d-flex'}>
-                        <input type='text' onChange={handleSearch} className='search-input navbar-brand' placeholder='Search...'/>
-                        <button className={'search-button'} style={{ fill: 'rgba(248, 248, 248, 0.9)', transform: '', msFilter: '' }}>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                                <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-            </nav>
-
-        </header>
+        <AppBar position="fixed" sx={{
+            backgroundColor: 'rgba(44, 42, 42, 0.4)',
+            boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+            backdropFilter: 'blur(8px)',
+        }}>
+            <Toolbar>
+                <Container sx={{padding: '20px'}}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <Box sx={{paddingRight:'20px'}}>
+                                <Link href="/" >
+                                    <img src={Logo} alt="Logo" style={{ width: '50px'}} />
+                                </Link>
+                            </Box>
+                            <Box sx={{display: 'flex', gap: '20px'}}>
+                                <Link to={'/'} sx={{ textDecoration: 'none', color: 'white', marginRight: '20px' }}>
+                                    <Typography variant='h6'>
+                                        Home
+                                    </Typography>
+                                </Link>
+                                <Link to={'/movie'} sx={{ textDecoration: 'none', color: 'white' }}>
+                                    <Typography variant='h6'>
+                                        Movies
+                                    </Typography>
+                                </Link>
+                            </Box>
+                        </Box>
+                        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                            <InputBase
+                                type='text'
+                                onChange={handleSearch}
+                                placeholder='Search...'
+                                sx={{
+                                    width: '100%',
+                                    height: '40px',
+                                    borderRadius: '20px',
+                                    border: 'none',
+                                    outline: 'none',
+                                    padding: '5px 20px',
+                                    fontSize: '1rem',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+                                    color: 'white',
+                                    marginRight: '10px',
+                                }}
+                            />
+                            <IconButton style={{ backgroundColor: 'transparent', border: 'none', cursor: 'pointer' }}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                    <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"></path>
+                                </svg>
+                            </IconButton>
+                        </Box>
+                    </Box>
+                </Container>
+            </Toolbar>
+        </AppBar>
     );
 };
 

@@ -2,16 +2,17 @@ import React from 'react';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import './style.css'
+import {Box} from "@mui/material";
 
 const Layout = ({children}) => {
     return (
-        <div className={'background-layout'}>
+        <Box className={'background-layout'}>
             <Header />
-            <div style={{minHeight: '100vh'}}>
-                {children}
-            </div>
+                <Box style={{minHeight: '100vh'}}>
+                    {children}
+                </Box>
             <Footer />
-        </div>
+        </Box>
     );
 };
 

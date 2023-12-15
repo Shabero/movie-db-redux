@@ -1,54 +1,6 @@
-/*.body{*/
-/*    position: relative;*/
-/*    height: 200px;*/
-/*    border: 1px solid #ccc;*/
-/*    padding: 20px;*/
-/*}*/
 
-/*.navbar{*/
-/*    position: absolute;*/
-/*    top: -200px;*/
-/*    left: -50px;*/
-/*}*/
-.header{
-    /* From https://css.glass */
-    background: rgba(44, 42, 42, 0.4);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(7.9px);
-}
 
 .logo img{
     width: 50px;
     padding-right: 5px;
-}
-
-input{
-    width: 100%;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    outline: none;
-    padding: 5px 20px;
-    font-size: 1rem;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-}
-
-input:hover{
-    outline: 2px solid;
-    transition: 1s;
-}
-
-input::-webkit-input-placeholder { color: snow; }
-
-.search-button img {
-    width: 30px;
-    height: 30px;
-
-}
-
-.search-button{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
 }

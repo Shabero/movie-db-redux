@@ -4,6 +4,9 @@ import Layout from '../../Components/Layout/Layout';
 import MovieList from '../../Components/MovieList/MovieList';
 import Carousel from '../../Components/Carousel/Carousel';
 import Pagination from '../../Components/Pagination/Pagination';
+import { Container} from "@mui/material";
+
+
 
 const HomePage = () => {
     const { movies } = useSelector((state) => state);
@@ -13,9 +16,9 @@ const HomePage = () => {
     return (
         <Layout>
             <Carousel movies={movies} />
-            <div className={'container mt-5 pt-5'}>
-                <MovieList movies={movies} />
-            </div>
+                <Container fixed sx={{paddingTop: '100px'}}>
+                    <MovieList movies={movies} />
+                </Container>
             <Pagination movies={movies} />
         </Layout>
     );
