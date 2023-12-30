@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './style.css'
 import axios from "axios";
 import {API_KEY, BASE_URL} from "../../config/config";
-import Logo from '../../../../mui/src/Components/Assets/logo.png';
+import Logo from '../Assets/logo.png';
 import {AppBar, Box, Container, IconButton, InputBase, Toolbar, Typography} from "@mui/material";
 
 
@@ -47,11 +47,11 @@ const Header = () => {
                                         Home
                                     </Typography>
                                 </Link>
-                                <Link to={'/movie'} sx={{ textDecoration: 'none', color: 'white' }}>
-                                    <Typography variant='h6'>
-                                        Movies
-                                    </Typography>
-                                </Link>
+                                {/*<Link to={'/movie'} sx={{ textDecoration: 'none', color: 'white' }}>*/}
+                                {/*    <Typography variant='h6'>*/}
+                                {/*        Movies*/}
+                                {/*    </Typography>*/}
+                                {/*</Link>*/}
                             </Box>
                         </Box>
                         <Box sx={{ display: 'flex', alignItems: 'center' }}>
